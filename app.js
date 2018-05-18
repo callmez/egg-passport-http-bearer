@@ -7,13 +7,13 @@ module.exports = app => {
   const config = app.config.passportHttpBearer;
   config.passReqToCallback = true;
 
-  app.passport.use(new HttpBearerStrategy({ passReqToCallback: true }, (req, token, done) => {
-    const data = {
+  app.passport.use(new HttpBearerStrategy({ passReqToCallback: true }, (req, access_token, done) => {
+    const user = {
       provider: 'bearer',
-      token,
+      access_token,
     };
     debug('%s %s get user: %j', req.method, req.url, data);
 
-    app.passport.doVerify(req, data, done);
+    app.passport.doVerify(req, user, done);
   }));
 };
