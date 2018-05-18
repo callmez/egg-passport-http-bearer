@@ -12,7 +12,7 @@ module.exports = app => {
       provider: 'bearer',
       access_token,
     };
-    debug('%s %s get user: %j', req.method, req.url, data);
+    debug('%s %s get user: %j', req.method, req.url, user);
 
     app.passport.doVerify(req, user, done);
   }));
