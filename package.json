@@ -1,0 +1,32 @@
+{
+  "name": "egg-passport-http-bearer",
+  "version": "1.0.0",
+  "description": "the passport-http-bearer plugin for egg",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callmez/egg-passport-http-bearer.git"
+  },
+  "keywords": [
+    "egg",
+    "passport",
+    "http",
+    "bearer",
+    "access",
+    "token"
+  ],
+  "author": "callme-z@qq.com",
+  "bugs": {
+    "url": "https://github.com/callmez/egg-passport-http-bearer/issues"
+  },
+  "homepage": "https://github.com/callmez/egg-passport-http-bearer#readme",
+  "dependencies": {
+    "passport-http-bearer": "^1.0.1"
+  },
+  "eggPlugin": {
+    "name": "passportHttpBearer",
+    "dependencies": [
+      "passport"
+    ]
+  }
+}
